@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+import { Start } from "./components/Start";
+import { InGame } from "./components/InGame";
+import { End } from "./components/End";
+import quizData from "./data/questions.json";
 
 function App() {
+  const [step, setStep] = useState(1);
+  const [result, setResult] = useState(0);
+
+  const onQuizStart: any = () => {
+    setStep(2);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {step === 1 && <Start onQuizStart={onQuizStart} />}
+      {step === 2 && (
+        <InGame
+          data={quizData}
+          onSetStep={setStep}
+          result={result}
+          setResult={setResult}
+        />
+      )}
+      {step === 3 && <End result={result} onSetStep={setStep} />}
     </div>
   );
 }

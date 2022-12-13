@@ -1,0 +1,27 @@
+.startGame{
+    padding-top: 64px;
+}
+
+.startGame h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+}
+
+.startGame button{
+    margin-top: 20px;
+    background: #6ee7b7;
+    padding: 1rem 4rem;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.startGame button:hover{
+    color: #fff;
+    background-color: #10B981
+}

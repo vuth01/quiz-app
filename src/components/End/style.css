@@ -1,0 +1,37 @@
+
+.endGame {
+    padding-top: 4rem;
+}
+.score{
+    font-weight: normal;
+    color: #fff;
+}
+
+.score h1{
+    font-weight: 500;
+}
+
+.btn-end-group{
+    margin-top: 1rem;
+}
+
+.btn-tryAgain{
+    background:#6ee7b7;
+    color:#000;
+}
+
+.btn-tryAgain:hover{
+    background:#10B981;
+    color:#fff;
+}
+
+.btn-review{
+    color:#fff;
+    background:#ef4444;
+}
+
+.btn-review:hover{
+    color:#fff;
+    background:#ef4444;
+    opacity: 0.7;
+}
